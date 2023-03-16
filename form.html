@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>bookmyconsultation</title>
+  <style>
+    body {
+      background-image: url("doc.jpg");
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+    }
+
+    h1 {
+      text-transform: uppercase;
+      text-align: right;
+      font-size: 40px;
+      margin: 15px;
+    }
+
+    form {
+      padding: 75px;
+      position: absolute;
+      top: 112px;
+      left: 519px;
+    }
+
+    input {
+      width: 150%;
+    }
+  </style>
+</head>
+
+<body>
+  <form action="#" onsubmit="getacall(event)">
+    <h1>Book a call</h1>
+    <hr>
+    <div>
+      <label for="fname">Name :</label>
+      <br>
+      <input type="text" id="fname" name="fname" required autofocus>
+      <br>
+      <label for="email">Email id :</label>
+      <br>
+      <input type="email" id="email" name="email" placeholder="Something@email.com" required>
+      <br>
+      <label for="ph">Phone no :</label>
+      <br>
+      <input type="number" id="ph" name="ph" required>
+      <br>
+      <label for="date">Date :</label><br>
+      <input type="date" id="date" name="date" required>
+      <br>
+      <label for="time">Select a time</label><br>
+      <input type="time" id="time" name="time" required>
+    </div>
+    <br>
+    <button>get a call</button>
+  </form>
+  <script>
+    function getacall(event) {
+      event.preventDefault();
+      console.log(event.target.fname.value)
+    }
+  </script>
+</body>
+
+</html>
